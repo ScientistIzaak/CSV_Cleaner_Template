@@ -20,7 +20,8 @@ def clean_csv(input_file_path):
     # Clean the data by removing commas and replacing backslashes
     cleaned_data = []
     for row in data:
-        cleaned_row = [cell.replace(',', '').replace("\\", "/") for cell in row]
+        cleaned_row = [cell.replace(',', '') for cell in row]
+        cleaned_row = [cell.replace("\\", "/") for cell in cleaned_row]
         cleaned_data.append(cleaned_row)
 
     # Generate the output file name with "_clean" appended
